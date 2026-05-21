@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# this script exectes in my local linux machine after dns configuration;
 
 LOGS_FOLDER="/var/log/expense"
 SCRIPT_NAME=$(basename "$0" | cut -d "." -f1)

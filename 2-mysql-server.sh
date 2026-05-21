@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# thsi script executed my local ubuntu linux machine
 
 LOGS_FOLDER="/var/log/expense"
 SCRIPT_NAME=$(basename "$0" | cut -d "." -f1)
