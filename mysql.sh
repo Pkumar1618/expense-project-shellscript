@@ -21,20 +21,20 @@ VALIDATE() {
     fi
 }
 
-echo "Script started executing at: $(date)" &>>$LOG_FILE
+echo "Script started executing at: $(date)" | tee -a "$LOG_FILE"
 
 CHECK_ROOT
 
 apt update
 
-apt install mysql-server -y
+apt install mysql-server -y &>>LOG_FILE
 VALIDATE $? "Installing MYSQL Server"
 
-systemctl enabled mysqld
+systemctl enabled mysqld &>>LOG_FILE
 VALIDATE $? "Enables MYSQL Server"
 
-systemctl start mysqld
+systemctl start mysqld &>>LOG_FILE
 VALIDATE $? "started MYSQL Server"
 
-mysql_secure_installation --set-root-pass ExpenseApp@1
+mysql_secure_installation --set-root-pass ExpenseApp@1 &>>LOG_FILE
 VALIDATE $? "setting up root password"
