@@ -21,18 +21,9 @@ VALIDATE() {
     fi
 }
 
-USAGE() {
-    echo -e "$R USAGE :: sudo sh 21-redirectors-usage.sh package1 package2 ... $N"
-    exit 1
-}
-
 echo "Script started executing at: $(date)" &>>$LOG_FILE
 
 CHECK_ROOT
-
-if [ $# -eq 0 ]; then
-   USAGE
-fi
 
 apt update
 
