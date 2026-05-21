@@ -1,4 +1,4 @@
-LOGS_FOLDER="/var/log/shell-script"
+LOGS_FOLDER="/var/log/expense"
 SCRIPT_NAME=$(basename "$0" | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
@@ -31,7 +31,7 @@ apt install mysql-server -y &>>LOG_FILE
 VALIDATE $? "Installing MYSQL Server"
 
 systemctl enabled mysqld &>>LOG_FILE
-VALIDATE $? "Enables MYSQL Server"
+VALIDATE $? "Enabled MYSQL Server"
 
 systemctl start mysqld &>>LOG_FILE
 VALIDATE $? "started MYSQL Server"
