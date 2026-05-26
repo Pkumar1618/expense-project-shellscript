@@ -53,8 +53,18 @@ fi
   mkdir -p /app
   VALIDATE $? "Creating /app folder"
 
-  curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>$LOG_FILE
+  apt install -y unzip &>> "$LOG_FILE"
+  VALIDATE $? "Installing unzip"
+
+  curl -f -L -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>> "$LOG_FILE"
   VALIDATE $? "Downloading backend application code"
-  cd /app
-  unzip /tmp/backend.zip
-  VALIDATE $? "Extracting"
+
+if [ ! -f /tmp/backend.zip ]; then
+    echo "backend.zip not found... FAILED" | tee -a "$LOG_FILE"
+    exit 1
+fi
+
+    cd /app
+
+    unzip -o /tmp/backend.zip &>> "$LOG_FILE"
+    VALIDATE $? "Extracting"
