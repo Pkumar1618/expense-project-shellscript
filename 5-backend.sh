@@ -69,7 +69,7 @@ fi
     unzip -o /tmp/backend.zip &>> "$LOG_FILE"
     VALIDATE $? "Extracting"
     npm install &>>$LOG_FILE
-    cp -p /home/prashanth/expense-project-shellscript/7-backend.services /etc/systemd/system/backend.service
+    cp -p /home/prashanth/expense-project-shellscript/backend.services /etc/systemd/system/backend.service
 
 # load the data before backend running
 
