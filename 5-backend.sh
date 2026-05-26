@@ -73,7 +73,8 @@ fi
 
 # load the data before backend running
 
-apt install mysql -y &>>$LOG_FILE
+
+apt install mysql-client -y &>>$LOG_FILE
 VALIDATE $? "Installing MYSQL Client"
 
 mysql -h 192.168.251.172 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
