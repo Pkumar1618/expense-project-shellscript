@@ -27,35 +27,28 @@ VALIDATE() {
     fi
 }
 
-echo "Script started executing at: $(date)" | tee -a "$LOG_FILE"
+echo "Script started executing at: $(date)">>$LOG_FILE
 
 CHECK_ROOT
 
-apt install mysql-server -y >>"$LOG_FILE" 2>&1
+dnf install mysql-server -y >>$LOG_FILE
 VALIDATE $? "Installing MYSQL Server"
 
-systemctl enable mysql >>"$LOG_FILE" 2>&1
+systemctl enable mysql >>$LOG_FILE
 
 VALIDATE $? "Enabled MYSQL Server"
 
-systemctl start mysql >>"$LOG_FILE" 2>&1
+systemctl start mysql >>$LOG_FILE
 VALIDATE $? "Started MYSQL Server"
 
 # Check root login
-mysql -h mysql.daws81.online -u root -pExpenseApp@1 -e 'show databases;' >>"$LOG_FILE" 2>&1
+mysql -h mysql.daws81.online -u root -pExpenseApp@1 -e 'show databases;' >>$LOG_FILE
 
 if [ $? -ne 0 ]
 then
-   echo "MySQL root password is not setup, setting now" | tee -a "$LOG_FILE"
-
-   mysql -u root <<EOF >>"$LOG_FILE" 2>&1
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ExpenseApp@1';
-FLUSH PRIVILEGES;
-
-EOF
-
+   echo "MySQL root password is not setup, setting now" >>$LOG_FILE
+   mysql_secure_installation --set-root-password ExpenseApp@1
    VALIDATE $? "Setting up root password"
 else
-   echo "MySQL root password is already setup... SKIPPING" | tee -a "$LOG_FILE"
+   echo -e "MySQL root password is already setup...$Y SKIPPING $N" | tee -a $LOG_FILE
 fi
-
