@@ -1,8 +1,6 @@
 
 #!/bin/bash
 
-# This script is executed on Ubuntu 20.04.6
-
 LOGS_FOLDER="/var/log/expense"
 SCRIPT_NAME=$(basename "$0" | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
@@ -11,7 +9,6 @@ LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
 USERID=$(id -u)
 
 mkdir -p "$LOGS_FOLDER"
-
 
 CHECK_ROOT() {
     if [ "$USERID" -ne 0 ]; then
@@ -33,26 +30,22 @@ echo "Script started at: $(date)" | tee -a "$LOG_FILE"
 
 CHECK_ROOT
 
-apt update -y "$LOG_FILE" 2>&1
+apt update -y >> "$LOG_FILE" 2>&1
 VALIDATE $? "Updating packages"
 
-# ✅ Install curl first
-apt install -y curl "$LOG_FILE" 2>&1
+apt install -y curl >> "$LOG_FILE" 2>&1
 VALIDATE $? "Installing curl"
 
-# ✅ Add NodeSource repo properly
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash - "$LOG_FILE" 2>&1
+curl -fsSL https://deb.nodesource.com/setup_20.x | bash - >> "$LOG_FILE" 2>&1
 VALIDATE $? "Adding NodeSource repo"
 
-apt install -y nodejs "$LOG_FILE" 2>&1
+apt install -y nodejs >> "$LOG_FILE" 2>&1
 VALIDATE $? "Installing Node.js"
 
-# ✅ FIX: POSIX compatible redirection (works in sh/bash)
-id expense > /dev/null 2>&1 
+id expense > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-    useradd -m expense "$LOG_FILE" 2>&1
+    useradd -m expense >> "$LOG_FILE" 2>&1
     VALIDATE $? "Creating expense user"
 else
     echo "Expense user already exists ... SKIPPED" | tee -a "$LOG_FILE"
 fi
-
