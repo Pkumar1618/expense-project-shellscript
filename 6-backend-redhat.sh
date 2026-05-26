@@ -59,4 +59,24 @@ VALIDATE $? "Downloading backend application code"
  unzip /tmp/backend.zip
  VALIDATE $? "Extracting"
 
+ npm install &>>$LOG_FILE
+ cp -p /home/prashanth/expense-project-shellscript/7-backend.services /etc/systemd/system/backend.service
+
+# load the data before backend running
+
+dnf install mysql -y &>>$LOG_FILE
+VALIDATE $? "Installing MYSQL Client"
+
+mysql -h mysql.daws81.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
+VALIDATE $? "Schema loading"
+
+systemctl daemon-reload &>>$LOG_FILE
+VALIDATE $? "Daemon reload"
+
+systemctl enable backend &>>$LOG_FILE
+VALIDATE $? "Enabled backend"
+
+systemctl restart backend &>>$LOG_FILE
+VALIDATE $? "Restarted Backend"
+
 
