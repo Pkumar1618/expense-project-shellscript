@@ -33,24 +33,24 @@ echo "Script started at: $(date)" | tee -a "$LOG_FILE"
 
 CHECK_ROOT
 
-apt update -y
+apt update -y "$LOG_FILE" 2>&1
 VALIDATE $? "Updating packages"
 
 # ✅ Install curl first
-apt install -y curl
+apt install -y curl "$LOG_FILE" 2>&1
 VALIDATE $? "Installing curl"
 
 # ✅ Add NodeSource repo properly
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+curl -fsSL https://deb.nodesource.com/setup_20.x | bash - "$LOG_FILE" 2>&1
 VALIDATE $? "Adding NodeSource repo"
 
-apt install -y nodejs
+apt install -y nodejs "$LOG_FILE" 2>&1
 VALIDATE $? "Installing Node.js"
 
 # ✅ FIX: POSIX compatible redirection (works in sh/bash)
-id expense > /dev/null 2>&1
+id expense > /dev/null 2>&1 
 if [ $? -ne 0 ]; then
-    useradd -m expense
+    useradd -m expense "$LOG_FILE" 2>&1
     VALIDATE $? "Creating expense user"
 else
     echo "Expense user already exists ... SKIPPED" | tee -a "$LOG_FILE"
