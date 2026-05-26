@@ -12,9 +12,10 @@ USERID=$(id -u)
 
 mkdir -p "$LOGS_FOLDER"
 
+
 CHECK_ROOT() {
     if [ "$USERID" -ne 0 ]; then
-        echo "Please run this script with root privileges" | tee -a "$LOG_FILE"
+        echo "Run as root" | tee -a "$LOG_FILE"
         exit 1
     fi
 }
@@ -32,23 +33,26 @@ echo "Script started at: $(date)" | tee -a "$LOG_FILE"
 
 CHECK_ROOT
 
-# Update package list
 apt update -y
-VALIDATE $? "Updating package lists"
+VALIDATE $? "Updating packages"
 
-# Install Node.js 20 using NodeSource repo
+# ✅ Install curl first
+apt install -y curl
+VALIDATE $? "Installing curl"
+
+# ✅ Add NodeSource repo properly
 curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 VALIDATE $? "Adding NodeSource repo"
 
 apt install -y nodejs
 VALIDATE $? "Installing Node.js"
 
-# Create expense user if not exists
-id expense &>/dev/null
+# ✅ FIX: POSIX compatible redirection (works in sh/bash)
+id expense > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     useradd -m expense
     VALIDATE $? "Creating expense user"
 else
-
-echo "Expense user already exists ... SKIPPED" | tee -a "$LOG_FILE"
+    echo "Expense user already exists ... SKIPPED" | tee -a "$LOG_FILE"
 fi
+
