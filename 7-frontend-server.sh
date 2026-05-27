@@ -65,7 +65,7 @@ cd /usr/share/nginx/html || exit
 unzip -o /tmp/frontend.zip >> "$LOG_FILE" 2>&1
 VALIDATE $? "Extract frontend code"
 
-cp /home/prashanth/expense-project-shellscript/expense.conf /etc/nginx/default.d/expense.conf >> "$LOG_FILE" 2>&1
+cp -p /home/prashanth/expense-project-shellscript/expense.conf /etc/nginx/default.d/expense.conf >> "$LOG_FILE" 2>&1
 VALIDATE $? "Copied expense config"
 
 systemctl restart nginx >> "$LOG_FILE" 2>&1
