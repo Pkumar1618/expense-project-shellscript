@@ -69,6 +69,5 @@ cp -p /home/prashanth/expense-project-shellscript/expense.conf /etc/nginx/defaul
 echo "Exit code: $?" >> "$LOG_FILE"
 VALIDATE $? "Copied expense config"
 
-
 systemctl restart nginx >> "$LOG_FILE" 2>&1
-
+VALIDATE $? "Restarted Nginx" 
