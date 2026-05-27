@@ -1,0 +1,82 @@
+root@frontend-server:/home/prashanth/expense-project-shellscript# history
+    1  vi /etc/sudoers
+    2  exit
+    3  ls
+    4  clear
+    5  ls
+    6  apt install net-tools
+    7  clear
+    8  ls
+    9  ifconfig
+   10  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   11  apt install git
+   12  clear
+   13  ls
+   14  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   15  ls
+   16  cd expense-project-shellscript/
+   17  ls
+   18  chmod u+x *.sh
+   19  ls
+   20  clear
+   21  bash 7-frontend-server.sh
+   22  cd ..
+   23  ls
+   24  rm -rf expense-project-shellscript/
+   25  ls
+   26  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   27  ls
+   28  cd expense-project-shellscript/
+   29  ls
+   30  chmod u+x *.sh
+   31  ls
+   32  clear
+   33  bash 7-frontend-server.sh
+   34  rm -f /etc/nginx/sites-enabled/default
+   35  rm -f /etc/nginx/conf.d/default.conf
+   36  vi /etc/nginx/conf.d/expense.conf
+   37  apt update
+   38  apt install vim
+   39  clear
+   40  vi /etc/nginx/conf.d/expense.conf
+   41  nginx -t
+   42  systemctl restart nginx
+   43  curl http://192.168.251.175:8080
+   44  ping 192.168.251.173
+   45  curl http://192.168.251.175:8080
+   46  curl http://192.168.251.176:8080
+   47  vi /etc/nginx/conf.d/expense.conf
+   48  curl http://192.168.251.176:8080
+   49  curl http://192.168.251.173:8080
+   50  vi /etc/nginx/conf.d/expense.conf
+   51  cd ..
+   52  ls
+   53  rm -rf expense-project-shellscript/
+   54  ls
+   55  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   56  ls
+   57  cd expense-project-shellscript/
+   58  ls
+   59  chmod u+x *.sh
+   60  ls
+   61  clear
+   62  ls
+   63  bash 7-frontend-server.sh
+   64  curl http://192.168.251.176/api/
+   65  systemctl status nginx
+   66  ss -tulnp | grep :80
+   67  clear
+   68  nginx -T | grep listen
+   69  vi /etc/nginx/sites-available/expense
+   70  ln -s /etc/nginx/sites-available/expense /etc/nginx/sites-enabled/
+   71  rm -f /etc/nginx/sites-enabled/default
+   72  nginx -t
+   73  ss -tulnp | grep :80
+   74  cat /etc/nginx/nginx.conf | grep include
+   75  vi /etc/nginx/nginx.conf
+   76  nginx -t
+   77  systemctl restart nginx
+   78  ss -tulnp | grep :80
+   79  curl http://192.168.251.176
+   80  curl http://192.168.251.176/api/
+   81  history

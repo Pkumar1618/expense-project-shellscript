@@ -1,0 +1,74 @@
+root@mysql-server:/home/prashanth/expense-project-shellscript# history
+    1  vi /etc/sudoers
+    2  exit
+    3  ls
+    4  clear
+    5  ls
+    6  apt install git -y
+    7  clear
+    8  ls
+    9  git clone https://github.com/Pkumar1618/shell-script-practice.git
+   10  ls
+   11  cd shell-script-practice/
+   12  ls
+   13  chmod u+x *.sh
+   14  ls
+   15  clear
+   16  ls
+   17  cd ..
+   18  ls
+   19  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   20  ls
+   21  cd expense-project-shellscript/
+   22  ls
+   23  chmod u+x *.sh
+   24  ls
+   25  clear
+   26  ls
+   27  sh 2-mysql-server.sh
+   28  systemctl status mysql
+   29  netstat -lntp
+   30  ps -ef | grep mysqld
+   31  clear
+   32  ls
+   33  ifconfig
+   34  netstat -lntp | grep 3306
+   35  vi /etc/mysql/mysql.conf.d/mysqld.cnf
+   36  nano /etc/mysql/mysql.conf.d/mysql.cnf
+   37  ls
+   38  apt update
+   39  apt install vim
+   40  clear
+   41  vim /etc/mysql/mysql.conf.d/mysql.cnf
+   42  vi /etc/mysql/mysql.conf.d/mysqld.cnf
+   43  systemctl restart mysql
+   44  systemctl status mysql
+   45  netstat -lntp | grep 3306
+   46  ls
+   47  cd expense-project-shellscript/
+   48  ls
+   49  mysql
+   50  exit
+   51  apt update
+   52  apt install net-tools
+   53  apt install openssh-server
+   54  systemctl restart mysql
+   55  ifconfig
+   56  telnet 192.168.251.172 3306
+   57  netstat -lntp | grep 3306
+   58  sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+   59  sudo systemctl restart mysql
+   60  netstat -lntp | grep 3306
+   61  ls
+   62  clear
+   63  ls
+   64  cd expense-project-shellscript/
+   65  ls
+   66  clear
+   67  ls
+   68  systemctl restart mysql
+   69  cat /etc/mysql/mysql.conf.d/mysqld.cnf | grep bind-address
+   70  ufw status
+   71  ifconfig
+   72  history
+root@mysql-server:/home/prashanth/expense-project-shellscript#

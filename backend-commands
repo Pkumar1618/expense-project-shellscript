@@ -1,0 +1,230 @@
+root@backend-server:/home/prashanth/expense-project-shellscript# history
+    1  vi /etc/sudoers
+    2  exit
+    3  apt update
+    4  apt install net-tools
+    5  apt install openssh-server
+    6  ifconfig
+    7  exit
+    8  ls
+    9  clear
+   10  apt install git
+   11  clear
+   12  ls
+   13  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   14  ls
+   15  cd expense-project-shellscript/
+   16  ls
+   17  chmod u+x *.sh
+   18  ls
+   19  bash 5-backend.sh
+   20  clear
+   21  bash 5-backend.sh
+   22  git pull
+   23  clear
+   24  cd ..
+   25  ls
+   26  rm -rf expense-project-shellscript/
+   27  ls
+   28  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   29  ls
+   30  cd expense-project-shellscript/
+   31  ls
+   32  cd ..
+   33  l
+   34  rm -rf expense-project-shellscript/
+   35  ls
+   36  cd expense-project-shellscript/
+   37  lsclear
+   38  clear
+   39  ls
+   40  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   41  cd expense-project-shellscript/
+   42  ls
+   43  chmod u+x *.sh
+   44  ls
+   45  sh 5-backend.sh
+   46  cd ..
+   47  ls
+   48  rm -rf expense-project-shellscript/
+   49  ls
+   50  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   51  ls
+   52  cd expense-project-shellscript/
+   53  ls
+   54  chmod u+x *.sh
+   55  ls
+   56  bash 5-backend.sh
+   57  ls
+   58  cd /app/
+   59  ls
+   60  ls -la
+   61  ls -l
+   62  clear
+   63  ls
+   64  cd /home/prashanth/
+   65  ls
+   66  cd expense-project-shellscript/
+   67  ls
+   68  bash 5-backend.sh
+   69  cd /app/
+   70  ls
+   71  bash 5-backend.sh
+   72  cd /home/prashanth/expense-project-shellscript/
+   73  bash 5-backend.sh
+   74  clear
+   75  ls
+   76  cd /etc/systemd/system/
+   77  ls
+   78  ls -l /home/prashanth/expense-project-shellscript/7-backend.services.sh
+   79  ls -l /home/prashanth/expense-project-shellscript/
+   80  ls -l /home/prashanth/expense-project-shellscript/backen.service
+   81  pwd
+   82  cd /home/prashanth/
+   83  ls
+   84  cd expense-project-shellscript/
+   85  ls
+   86  pwd
+   87  ls -l /home/prashanth/expense-project-shellscript/7-backend.service
+   88  cleae
+   89  clear
+   90  ls
+   91  cd ..
+   92  ls
+   93  rm -rf expense-project-shellscript/
+   94  ls
+   95  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+   96  ls
+   97  cd expense-project-shellscript/
+   98  ls
+   99  ls -l /home/prashanth/expense-project-shellscript/7-backend.service
+  100  ls -l /home/prashanth/expense-project-shellscript/7-backend.services
+  101  clear
+  102  cd ..
+  103  ls
+  104  rm -rf expense-project-shellscript/
+  105  ls
+  106  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+  107  ls
+  108  cd expense-project-shellscript/
+  109  ls
+  110  chmod u+x *.sh
+  111  ls
+  112  clear
+  113  ls
+  114  rm -rf expense-project-shellscript/
+  115  cd ..
+  116  ls
+  117  rm -rf expense-project-shellscript/
+  118  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+  119  ls
+  120  cd expense-project-shellscript/
+  121  ls
+  122  chmod u+x *.sh
+  123  ls
+  124  clear
+  125  ls
+  126  bash 5-backend.sh
+  127  cd ..
+  128  ls
+  129  rm -rf expense-project-shellscript/
+  130  ls
+  131  clear
+  132  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+  133  ls
+  134  cd expense-project-shellscript/
+  135  ls
+  136  chmod u+x *.sh
+  137  clear
+  138  ls
+  139  bash 5-backend.sh
+  140  cd ..
+  141  ls
+  142  rm -rf expense-project-shellscript/
+  143  ls
+  144  clear
+  145  git clone https://github.com/Pkumar1618/expense-project-shellscript.git
+  146  ls
+  147  cd expense-project-shellscript/
+  148  ls
+  149  chmod u+x *.sh
+  150  ls
+  151  clear
+  152  ls
+  153  bash 5-backend.sh
+  154  cd /app/
+  155  ls
+  156  cd schema/
+  157  ls
+  158  cat backend.sql
+  159  ping 192.168.251.172
+  160  netstat -lntp | grep 3306
+  161  cd /home/prashanth/expense-project-shellscript/
+  162  ls
+  163  clear
+  164  ls
+  165  bash 5-backend.sh
+  166  mysql -h 192.168.251.172 -uroot -pExpenseApp@1
+  167  ufw status
+  168  telnet 192.168.251.172 3306
+  169  mysql -h 192.168.251.172 -uroot -pExpenseApp@1
+  170  bash 5-backend.sh
+  171  netstat -lntp | grep 3306
+  172  netstat -lntp
+  173  clear
+  174  systemctl status backend
+  175  ps -rf | grep node
+  176  ps -rf
+  177  clear
+  178  netstat -lntp
+  179  ps -ef | grep node
+  180  clear
+  181  ls
+  182  telnet 192.168.251.172 3306
+  183  clear
+  184  ls
+  185  mysql
+  186  clear
+  187  cd ..
+  188  ls
+  189  mysql
+  190  clear
+  191  cd /var/log/expense/
+  192  ls
+  193  cat 5-backend-2026-05-26-1
+  194  cat 5-backend-2026-05-26-13-05-54.log
+  195  clear
+  196  ls
+  197  cat 5-backend-2026-05-26-16-32-48.log
+  198  cd /home/prashanth/
+  199  ls
+  200  cd expense-project-shellscript/
+  201  ls
+  202  clear
+  203  ls
+  204  clear
+  205  ls
+  206  clear
+  207  cd expense-project-shellscript/
+  208  ls
+  209  clear
+  210  ls
+  211  netstat -tulnp | grep 8080
+  212  ping 192.168.251.175
+  213  ss -tulnp | grep 8080
+  214  ifconfig
+  215  ss -tulnp | grep 8080
+  216  systemctl restart backend
+  217  cat /etc/mysql/mysql.conf.d/mysqld.cnf | grep bind-address
+  218  journalctl -u backend -n 50
+  219  systemctl status backend
+  220  ss -tulnp | grep 8080
+  221  ufw status
+  222  ping 192.168.251.176
+  223  ifconfig
+  224  curl http://192.168.251.175:8080
+  225  vi /etc/nginx/conf.d/expense.conf
+  226  ss -tulnp | grep 8080
+  227  curl http://localhost:8080
+  228  history
+root@backend-server:/home/prashanth/expense-project-shellscript#
