@@ -77,7 +77,7 @@ fi
 apt install mysql-client -y &>>$LOG_FILE
 VALIDATE $? "Installing MYSQL Client"
 
-mysql -h 192.168.251.172 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
+mysql -h 192.168.250.243 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
 VALIDATE $? "Schema loading"
 
 systemctl daemon-reload &>>$LOG_FILE
